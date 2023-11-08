@@ -7,18 +7,24 @@ struct book{
 	float price;
 };
 int main(){
-	struct book b1;
+	int i,n=3;
+	struct book b[n];
+	for(i=0;i<n;i++){
+	printf("enter Book %d details :\n",i+1);
 	printf("enter title :");
-	scanf("%s",&b1.title);
+	scanf("%s",&b[i].title);
 	printf("enter author :");
-	scanf("%s",&b1.author);
+	scanf("%s",&b[i].author);
 	printf("enter publication :");
-	scanf("%s",&b1.publication);
+	scanf("%s",&b[i].publication);
 	printf("enter price :");
-	scanf("%f",&b1.price);
-	
-	printf("title is =%s\n",b1.title);
-	printf("author is =%s\n",b1.author);
-	printf("publication is =%s\n",b1.publication);
-	printf("price is =%f",b1.price);
+	scanf("%f",&b[i].price);
+}
+	for(i=0;i<n;i++){
+	printf("\n Book %d details :",i+1);
+	printf("\ntitle is =%s\n",b[i].title);
+	printf("author is =%s\n",b[i].author);
+	printf("publication is =%s\n",b[i].publication);
+	printf("price is =%f",b[i].price);
+}
 }
