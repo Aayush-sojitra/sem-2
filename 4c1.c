@@ -7,6 +7,6 @@ void main(){
 	sec=sec%3600;
 	min=sec/60;
 	sec=sec%60;
-	printf("time=%d%d%d",hour,min,sec);
+	printf("time=%d:%d:%d",hour,min,sec);
 	
 }
