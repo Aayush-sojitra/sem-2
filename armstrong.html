@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        a = parseInt(prompt("enter value"));
+        n = a.toString().length;
+        m = a;
+        s = 0;
+        while (a != 0) {
+            r = a % 10;
+            s = s + Math.pow(r, n);
+            a = parseInt(a / 10);
+
+        }
+        if (s == m) {
+            document.write("armstrong");
+        } else {
+            document.write("not armstrong");
+        }
+    </script>
+</body>
+
+</html>
