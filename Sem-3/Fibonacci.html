@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        a = parseInt(prompt("Enter number of steps"));
+        document.write("0 1 ");
+        r1 = 0;
+        r2 = 1;
+        for (i = 1; i <= (a - 2); i++) {
+            r3 = r1 + r2;
+            r1 = r2;
+            r2 = r3;
+            document.write(r3 + " ");
+        }
+    </script>
+</body>
+
+</html>

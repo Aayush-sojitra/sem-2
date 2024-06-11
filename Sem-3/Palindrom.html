@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        a = parseInt(prompt("enter value of Number"));
+        n = a;
+        sum = 0;
+        while (a != 0) {
+            rem = a % 10;
+            sum = sum * 10 + rem;
+            a = parseInt(a / 10);
+        }
+        if (sum == n) {
+            document.write("Palindrome Number");
+        } else {
+            document.write("Not Palindrome Number");
+        }
+    </script>
+</body>
+
+</html>
