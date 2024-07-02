@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn {
+            background-color: #4CAF50;
+        }
+
+        #btn1 {
+            background-color: #ea535b;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="name" placeholder="Enter Name">
+
+    <input type="text" id="rollno" placeholder="Enter RollNo" />
+    <input type="button" value="Add" onclick="Addmy()" />
+
+    <div id="result"></div>
+    <script>
+        arr = [
+            {
+                name: 'Aayush',
+                rollNo: 112,
+            },
+            {
+                name: 'Vandan',
+                rollNo: 107,
+            },
+            {
+                name: 'Jenil',
+                rollNo: 135,
+            }
+        ]
+        e = 0;
+        index = -1;
+        function display() {
+            let table = document.getElementById('result');
+            let htmltable = '<table border="1">';
+            for (i = 0; i < arr.length; i++) {
+                htmltable += '<tr>';
+                htmltable += '<td>' + arr[i].name + '</td>';
+                htmltable += '<td>' + arr[i].rollNo + '</td>';
+                htmltable += '<td><input type="button" id="btn" value="Edit" onclick="Edit(' + i + ')" </td>';
+                htmltable += '<td> <input type="button" id="btn1" value="Delete" onclick="Delete(' + i + ')" </ td>';
+                htmltable += '</tr>'
+            }
+            htmltable += '</table>';
+            table.innerHTML = htmltable;
+        }
+        display();
+
+        function Addmy() {
+            if (e == 0) {
+                obj = {
+                    name: document.getElementById('name').value,
+                    rollNo: document.getElementById('rollno').value
+                }
+                arr.push(obj);
+                display();
+                document.getElementById('name').value = ' '
+                document.getElementById('rollno').value = ' '
+            }
+            else {
+
+            }
+        }
+
+        function Delete(i) {
+            arr.splice(i, 1);
+            display();
+        }
+
+        function Edit() {
+            index = i;
+
+        }
+
+    </script>
+</body>
+
+</html>
